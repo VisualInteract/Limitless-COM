@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Powers | Limitless: Ultimate Archives</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+    <div class="card">
+      <h2>All Powers</h2>
+      <p>This page contains a comprehensive list of powers featured in the Limitless universe and its inspirations. Powers may originate from original characters, external media, or conceptual toolsets.</p>
+      
+      <ul>
+        <li><strong>Creation:</strong> Forming or shaping universes from nothing. (Coil)</li>
+        <li><strong>Memory Anchoring:</strong> Retaining knowledge across timelines. (Coil)</li>
+        <li><strong>Reality Awareness:</strong> Sensing and perceiving multiversal shifts. (Coil)</li>
+        <li><strong>Wrath Shift:</strong> Channeling trauma into bursts of destructive energy. (Dylan)</li>
+        <li><strong>Adrenaline Barrier:</strong> Shield that strengthens based on physical strain. (Dylan)</li>
+        <li><strong>Momentum Overdrive:</strong> Releasing stored speed as destructive force. (Blaze)</li>
+        <li><strong>Disruption Pulse:</strong> Emitting shockwaves that interfere with tech or focus. (Blaze)</li>
+        <li><strong>Bitshift:</strong> Short-range reality edits and spatial warping. (Jaxbit)</li>
+        <li><strong>Playback Loop:</strong> Replaying the last 5 seconds of actions. (Jaxbit)</li>
+        <li><strong>Lag Surge:</strong> Slowing enemies while increasing own speed. (Jaxbit)</li>
+        <li><strong>Fragment Surge:</strong> Weaponizing fractured space. (Elliot)</li>
+        <li><strong>Echo Constructs:</strong> Creating unstable timeline copies. (Elliot)</li>
+        <li><strong>Emotional Detonation:</strong> Feeding off strong emotions to enhance power. (Elliot)</li>
+
+        <!-- Invincible-inspired powers -->
+        <li><strong>Viltrumite Strength:</strong> Superhuman strength, speed, and flight with high durability.</li>
+        <li><strong>Accelerated Healing:</strong> Rapid recovery from injuries that would cripple normal beings.</li>
+
+        <!-- Dishonored-inspired powers -->
+        <li><strong>Blink:</strong> Short-range teleportation in the direction of vision.</li>
+        <li><strong>Bend Time:</strong> Slowing or stopping time temporarily.</li>
+        <li><strong>Possession:</strong> Temporarily inhabiting another creature’s body.</li>
+        <li><strong>Dark Vision:</strong> Seeing enemies and objects through walls.</li>
+
+        <!-- Deathloop-inspired powers -->
+        <li><strong>Reprise:</strong> Revive automatically upon death up to a limited number of times.</li>
+        <li><strong>Shift:</strong> Blink-like teleport that can be used mid-combat.</li>
+        <li><strong>Havoc:</strong> Temporarily boosts strength and damage output significantly.</li>
+        <li><strong>Nexus:</strong> Link enemies so damage to one affects all linked targets.</li>
+
+        <!-- Miscellaneous / Build Tools Inspired -->
+        <li><strong>Editor Mode:</strong> Pause the environment and edit objects or terrain.</li>
+        <li><strong>Anchor Point Manipulation:</strong> Locking objects into a stable, movable form.</li>
+        <li><strong>Prefab Copying:</strong> Instantly duplicating structures or logic.</li>
+        <li><strong>Script Vision:</strong> Visualizing background processes and trigger systems.</li>
+
+        <!-- Misc. Original Ideas -->
+        <li><strong>Chrono Carve:</strong> Slicing through time, delaying damage or creating afterimages.</li>
+        <li><strong>Nullstep:</strong> Moving through a void dimension to reposition.</li>
+        <li><strong>Shattercast:</strong> Breaking and reassembling objects at range.</li>
+        <li><strong>Ember Veil:</strong> Cloaking the user in volatile fire that responds to willpower.</li>
+        <li><strong>Soul Spike:</strong> Summoning energy spears fueled by moral conflict.</li>
+        <li><strong>Loop Anchor:</strong> Temporarily creates a checkpoint in reality the user can rewind to.</li>
+        <li><strong>Glitch Field:</strong> Creates an unstable zone where physics and logic distort.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    async function loadHTML(id, url) {
+      const resp = await fetch(url);
+      if (resp.ok) {
+        document.getElementById(id).innerHTML = await resp.text();
+      } else {
+        console.error(`Failed to load ${url}:`, resp.status);
+      }
+    }
+    loadHTML('header-placeholder', '../header.html');
+    loadHTML('footer-placeholder', '../footer.html');
+  </script>
+
+</body>
+</html>

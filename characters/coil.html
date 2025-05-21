@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- Header placeholder -->
   <div id="header-placeholder"></div>
 
   <div class="container">
@@ -62,26 +61,19 @@
     </div>
   </div>
 
-  <!-- Footer placeholder -->
   <div id="footer-placeholder"></div>
 
   <script>
-    function loadHTML(selector, url) {
-      fetch(url)
-        .then(response => {
-          if (!response.ok) throw new Error(`Failed to load ${url}`);
-          return response.text();
-        })
-        .then(html => {
-          document.querySelector(selector).innerHTML = html;
-        })
-        .catch(err => {
-          console.error(err);
-        });
+    async function loadHTML(id, url) {
+      const resp = await fetch(url);
+      if (resp.ok) {
+        document.getElementById(id).innerHTML = await resp.text();
+      } else {
+        console.error(`Failed to load ${url}:`, resp.status);
+      }
     }
-
-    loadHTML('#header-placeholder', '../header.html');
-    loadHTML('#footer-placeholder', '../footer.html');
+    loadHTML('header-placeholder', '../header.html');
+    loadHTML('footer-placeholder', '../footer.html');
   </script>
 
 </body>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaxbit | Limitless: Ultimate Archives</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Basic Info</h2>
+      <ul>
+        <li><strong>Name:</strong> Jax "Jaxbit" Strayde</li>
+        <li><strong>Age:</strong> 17</li>
+        <li><strong>Role:</strong> Reality Shifter, Chaos Catalyst</li>
+        <li><strong>First Appearance:</strong> Limitless: Digital Revolt</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p>Jaxbit is a spontaneous and wild force of nature with the ability to twist the laws of reality around him. More than just a trickster, he walks the line between chaos and brilliance, turning impossible odds into opportunities. His powers give him near-infinite potential, but it’s his heart—and his loyalty to his friends—that keeps him grounded.</p>
+    </div>
+
+    <div class="card">
+      <h2>Personality</h2>
+      <p>Impulsive, loud, and always moving, Jaxbit thrives in unpredictability. He finds comfort in absurdity and excitement in the unknown. While he may come off as a goofball, he understands the weight of the multiverse far more than he lets on. He hides his fears behind jokes and momentum, choosing to charge forward rather than freeze in doubt.</p>
+    </div>
+
+    <div class="card">
+      <h2>Powers & Abilities</h2>
+      <ul>
+        <li><strong>Bitshift:</strong> Allows Jaxbit to momentarily reshape reality—stretching, warping, or twisting the world around him with raw intent. Objects can vanish, the ground can melt upward, or gravity can reverse on a whim.</li>
+        <li><strong>Playback Loop:</strong> Rewinds his own actions by 5 seconds, effectively undoing mistakes, dodging danger, or surprising foes by repeating attacks.</li>
+        <li><strong>Lag Surge:</strong> Temporarily slows the perception of time for others while speeding himself up, giving him an overwhelming advantage in critical moments.</li>
+      </ul>
+      <p>Jaxbit’s abilities are driven by willpower and instinct, not programming. His command of reality borders on chaos magic—freeform and emotionally charged—making him one of the most creatively dangerous beings in the multiverse.</p>
+    </div>
+
+    <div class="card">
+      <h2>Relationships</h2>
+      <ul>
+        <li><strong>Coil:</strong> The two have an uneasy synergy. Coil respects Jaxbit’s strength but often has to reel him in. Jaxbit, in turn, respects Coil’s weight of responsibility.</li>
+        <li><strong>Blue:</strong> Jaxbit and Blue are great friends, with plenty of inside jokes and shared chaos. Blue enjoys Jaxbit’s unpredictability, and the two often sync up in high-pressure situations with seamless trust.</li>
+        <li><strong>Blaze:</strong> They're partners-in-crime when it comes to pushing boundaries—figuratively and literally. Their combined momentum and instability can flip the course of a battle.</li>
+        <li><strong>Dylan:</strong> Jaxbit keeps Dylan guessing. While Dylan is more grounded and emotionally intense, Jaxbit respects him and occasionally tries to get him to lighten up.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Trivia</h2>
+      <ul>
+        <li>Jaxbit wears a red hoodie with black accents, black cargo pants, and a red-and-black Roblox "R" cap. His left arm is grey and wrapped in a black bandage, a side effect of overusing Bitshift.</li>
+        <li>Despite his chaos, Jaxbit has a strong moral compass—he just follows it in spirals instead of straight lines.</li>
+        <li>His powers sometimes act on emotion, causing unintended reality glitches when overwhelmed.</li>
+        <li>He often refers to himself as a "living bug in the code of existence."</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    async function loadHTML(id, url) {
+      const resp = await fetch(url);
+      if (resp.ok) {
+        document.getElementById(id).innerHTML = await resp.text();
+      } else {
+        console.error(`Failed to load ${url}:`, resp.status);
+      }
+    }
+    loadHTML('header-placeholder', '../header.html');
+    loadHTML('footer-placeholder', '../footer.html');
+  </script>
+
+</body>
+</html>

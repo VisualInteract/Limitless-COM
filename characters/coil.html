@@ -7,21 +7,9 @@
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Limitless: Ultimate Archives</h1>
-    <p>Character Profile: Coil</p>
-  </header>
 
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../characters.html">Characters</a>
-    <a href="../powers.html">Powers</a>
-    <a href="../universes.html">Universes</a>
-    <a href="../timelines.html">Timelines</a>
-    <a href="../factions.html">Factions</a>
-    <a href="../spinoffs.html">Spinoffs</a>
-    <a href="../lore.html">Lore</a>
-  </nav>
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
 
   <div class="container">
     <div class="card">
@@ -74,8 +62,27 @@
     </div>
   </div>
 
-  <footer>
-    © 2025 Limitless Archives. Created by Devran Karatas. All characters belong to their respective creators.
-  </footer>
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    function loadHTML(selector, url) {
+      fetch(url)
+        .then(response => {
+          if (!response.ok) throw new Error(`Failed to load ${url}`);
+          return response.text();
+        })
+        .then(html => {
+          document.querySelector(selector).innerHTML = html;
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    }
+
+    loadHTML('#header-placeholder', '../header.html');
+    loadHTML('#footer-placeholder', '../footer.html');
+  </script>
+
 </body>
 </html>

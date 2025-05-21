@@ -13,6 +13,7 @@
       color: #f4f4f4;
     }
 
+    /* Keep these styles for header and footer as they are loaded dynamically */
     header {
       background: linear-gradient(to right, #ff3131, #ff7f11);
       padding: 1.5rem;
@@ -74,20 +75,8 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Limitless: Ultimate Archives</h1>
-    <p>The official wiki for the multiverse of Limitless.</p>
-  </header>
-
-  <nav>
-    <a href="characters.html">Characters</a>
-    <a href="powers.html">Powers</a>
-    <a href="universes.html">Universes</a>
-    <a href="timelines.html">Timelines</a>
-    <a href="factions.html">Factions</a>
-    <a href="spinoffs.html">Spinoffs</a>
-    <a href="lore.html">Lore</a>
-  </nav>
+  <!-- placeholders for header and footer -->
+  <div id="header-placeholder"></div>
 
   <div class="container">
     <div class="card">
@@ -110,8 +99,28 @@
     </div>
   </div>
 
-  <footer>
-    © 2025 Limitless Archives. Created by Devran Karatas. All characters belong to their respective creators.
-  </footer>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Function to load HTML snippets into placeholders
+    function loadHTML(selector, url) {
+      fetch(url)
+        .then(response => {
+          if (!response.ok) throw new Error(`Failed to load ${url}`);
+          return response.text();
+        })
+        .then(html => {
+          document.querySelector(selector).innerHTML = html;
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    }
+
+    // Load header and footer HTML dynamically
+    loadHTML('#header-placeholder', 'header.html');
+    loadHTML('#footer-placeholder', 'footer.html');
+  </script>
 </body>
 </html>
+

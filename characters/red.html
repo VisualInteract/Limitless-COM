@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red | Limitless: Ultimate Archives</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Basic Info</h2>
+      <ul>
+        <li><strong>Name:</strong> Red</li>
+        <li><strong>Age:</strong> 23</li>
+        <li><strong>Role:</strong> Calm Realist, Culinary Genius</li>
+        <li><strong>First Appearance:</strong> Limitless: The Ultimate Strategy</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p>Red is the calm and collected member of the group, known for her sharp realism and incredible cooking skills that keep the team fueled and motivated. She runs the famous restaurant Zazaland’s, and her food is legendary within the Limitless universe.</p>
+    </div>
+
+    <div class="card">
+      <h2>Personality</h2>
+      <p>Red is pragmatic and grounded, often acting as the voice of reason when tensions rise. She’s caring in her own way, with a dry sense of humor and a knack for keeping things running smoothly. Despite her calm exterior, she’s fiercely loyal and protective of her friends.</p>
+    </div>
+
+    <div class="card">
+      <h2>Skills & Abilities</h2>
+      <ul>
+        <li><strong>Master Chef:</strong> Her culinary skills are unparalleled and often serve as morale boosters.</li>
+        <li><strong>Strategic Mind:</strong> Highly intelligent with an ability to analyze situations logically.</li>
+        <li><strong>Steadfast:</strong> Keeps calm in crises and helps stabilize the team’s morale.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Relationships</h2>
+      <ul>
+        <li><strong>Coil:</strong> Trusted ally, offering grounded advice and support.</li>
+        <li><strong>Blue:</strong> Close friendship with mutual respect; appreciates Blue’s energy but often acts as the calming influence.</li>
+        <li><strong>Dylan:</strong> Views Dylan’s temper with cautious respect but believes in his potential.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Trivia</h2>
+      <ul>
+        <li>Her restaurant Zazaland’s is the go-to spot for the team’s downtime.</li>
+        <li>Often uses sarcasm to hide concern for others.</li>
+        <li>Known for making the best coffee in the multiverse.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    async function loadHTML(id, url) {
+      const resp = await fetch(url);
+      if (resp.ok) {
+        document.getElementById(id).innerHTML = await resp.text();
+      } else {
+        console.error(`Failed to load ${url}:`, resp.status);
+      }
+    }
+    loadHTML('header-placeholder', '../header.html');
+    loadHTML('footer-placeholder', '../footer.html');
+  </script>
+</body>
+</html>

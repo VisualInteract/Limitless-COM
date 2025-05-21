@@ -7,40 +7,28 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Limitless: Ultimate Archives</h1>
-    <p>Character Index</p>
-  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="characters.html">Characters</a>
-    <a href="powers.html">Powers</a>
-    <a href="universes.html">Universes</a>
-    <a href="timelines.html">Timelines</a>
-    <a href="factions.html">Factions</a>
-    <a href="spinoffs.html">Spinoffs</a>
-    <a href="lore.html">Lore</a>
-  </nav>
+  <!-- placeholders for header and footer -->
+  <div id="header-placeholder"></div>
 
   <div class="container">
     <div class="card">
       <h2>Main Protagonists</h2>
       <ul>
         <li><a href="characters/coil.html">Coil</a> – The multiverse survivor and creator.</li>
-        <li><a href="#">Blue</a> – The fun companion with hidden depth.</li>
-        <li><a href="#">Red</a> – The calm realist and culinary genius of Zazaland’s.</li>
-        <li><a href="#">Dylan</a> – The hot-headed defender from another timeline, alternate version of Coil.</li>
-        <li><a href="#">Blaze</a> – The energetic movement-based powerhouse with disruption abilities.</li>
-        <li><a href="#">Jaxbit</a> – A chaotic genius with glitchy powers and smart-mouth energy.</li>
+        <li><a href="characters/blue.html">Blue</a> – The fun companion with hidden depth.</li>
+        <li><a href="characters/red.html">Red</a> – The calm realist and culinary genius of Zazaland’s.</li>
+        <li><a href="characters/dylan.html">Dylan</a> – The hot-headed defender from another timeline, alternate version of Coil.</li>
+        <li><a href="characters/blaze.html">Blaze</a> – The energetic movement-based powerhouse with disruption abilities.</li>
+        <li><a href="characters/jaxbit.html">Jaxbit</a> – A chaotic genius with glitchy powers and smart-mouth energy.</li>
       </ul>
     </div>
 
     <div class="card">
       <h2>Other Characters</h2>
       <ul>
-        <li><a href="#">Elliot</a> – The morally grey figure with a complicated history.</li>
-        <li><a href="#">The Tinpots</a> – Small but mighty! Featured in the spinoff <em>TINPOTS UNITE!</em></li>
+        <li><a href="characters/elliot.html">Elliot</a> – The morally grey figure with a complicated history.</li>
+        <li><a href="characters/tinpots.html">The Tinpots</a> – Small but mighty! Featured in the spinoff <em>TINPOTS UNITE!</em></li>
         <!-- Add more as needed -->
       </ul>
     </div>
@@ -48,14 +36,31 @@
     <div class="card">
       <h2>Spinoff-Exclusive</h2>
       <ul>
-        <li><a href="#">yez</a> – The mysterious strategist from the Tinpot team.</li>
+        <li><a href="characters/yez.html">yez</a> – The mysterious strategist from the Tinpot team.</li>
         <!-- Add more if you have others! -->
       </ul>
     </div>
   </div>
 
-  <footer>
-    © 2025 Limitless Archives. Created by Devran Karatas. All characters belong to their respective creators.
-  </footer>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    function loadHTML(selector, url) {
+      fetch(url)
+        .then(response => {
+          if (!response.ok) throw new Error(`Failed to load ${url}`);
+          return response.text();
+        })
+        .then(html => {
+          document.querySelector(selector).innerHTML = html;
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    }
+
+    loadHTML('#header-placeholder', 'header.html');
+    loadHTML('#footer-placeholder', 'footer.html');
+  </script>
 </body>
 </html>

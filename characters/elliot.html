@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elliot | Limitless: Ultimate Archives</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Basic Info</h2>
+      <ul>
+        <li><strong>Name:</strong> Elliot</li>
+        <li><strong>Age:</strong> Unknown (appears 20s)</li>
+        <li><strong>Role:</strong> Former Ally, Fractured Catalyst</li>
+        <li><strong>First Appearance:</strong> Limitless: Shattered Bond</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p>Elliot was once a trusted friend in Coil’s inner circle—until something changed. Twisted by resentment and a thirst for control, he walked away from the group and began manipulating cracks in the multiverse. His betrayal left scars, not only in reality, but in the hearts of those who once cared for him.</p>
+    </div>
+
+    <div class="card">
+      <h2>Personality</h2>
+      <p>Elliot is sharp, charismatic, and unnervingly calculated. He hides insecurity behind wit, often speaking with a tone that blends sarcasm and superiority. Though he once valued friendship, a deep need to prove himself and punish those he perceives as abandoning him has warped his perspective. He views Coil and the others as naive idealists—and believes only he sees the truth of the multiverse’s flaws.</p>
+    </div>
+
+    <div class="card">
+      <h2>Powers & Abilities</h2>
+      <ul>
+        <li><strong>Fragment Surge:</strong> Elliot can fracture space around him, weaponizing shards of unstable reality and creating mirror-like rifts.</li>
+        <li><strong>Echo Constructs:</strong> He manifests copies of himself or others, built from broken timelines and half-memories. These echoes are unstable but devastating in battle.</li>
+        <li><strong>Emotional Detonation:</strong> The more emotionally charged a space or individual is, the more power Elliot draws from it—turning pain, guilt, or anger into fuel.</li>
+      </ul>
+      <p>While not as naturally powerful as Coil or Jaxbit, Elliot’s cunning use of fractured universes makes him one of the most unpredictable forces in the multiverse.</p>
+    </div>
+
+    <div class="card">
+      <h2>Relationships</h2>
+      <ul>
+        <li><strong>Coil:</strong> Once Coil's closest companion, Elliot now sees him as the root of everything that went wrong. Their relationship is a tragic divide between two leaders who could have changed everything together.</li>
+        <li><strong>Blue:</strong> Elliot mocks Blue’s optimism, seeing it as willful ignorance. Despite this, he still remembers when they laughed together—though he'd never admit it.</li>
+        <li><strong>Dylan:</strong> Dylan distrusts Elliot completely and has vowed to stop him if he goes too far. Their confrontations are emotional and brutal.</li>
+        <li><strong>Jaxbit:</strong> Elliot finds Jaxbit’s chaos both frustrating and fascinating. He sees him as wasted potential, and sometimes tries to manipulate him for his own goals.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Trivia</h2>
+      <ul>
+        <li>Elliot’s eyes flicker with static when he taps into Echo Constructs.</li>
+        <li>He blames others for his actions, unable to face the idea that he became the very thing he feared.</li>
+        <li>There are hints that Elliot regrets the path he's taken—but every time he tries to stop, something pulls him deeper.</li>
+        <li>His theme motif is a distorted music box layered with reversed dialogue.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    async function loadHTML(id, url) {
+      const resp = await fetch(url);
+      if (resp.ok) {
+        document.getElementById(id).innerHTML = await resp.text();
+      } else {
+        console.error(`Failed to load ${url}:`, resp.status);
+      }
+    }
+    loadHTML('header-placeholder', '../header.html');
+    loadHTML('footer-placeholder', '../footer.html');
+  </script>
+
+</body>
+</html>

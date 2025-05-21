@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blaze | Limitless: Ultimate Archives</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Basic Info</h2>
+      <ul>
+        <li><strong>Name:</strong> Blaze (real name: Orange)</li>
+        <li><strong>Age:</strong> 20</li>
+        <li><strong>Role:</strong> Speed-Based Fighter, Disruption Specialist</li>
+        <li><strong>First Appearance:</strong> Limitless: Core Velocity</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p>Blaze is a kinetic powerhouse who thrives on motion. Known for his quick reflexes and sharper tongue, he’s both a loyal ally and an unpredictable force of nature. Behind his cocky attitude lies a deeply driven hero who has learned to weaponize momentum itself—not just in combat, but in life.</p>
+    </div>
+
+    <div class="card">
+      <h2>Personality</h2>
+      <p>Blaze is loud, bold, and confident. He’s the type to run into danger with a grin, trusting his speed and instincts to get him through. Though he often jokes around and plays the part of the daredevil, Blaze is fiercely dependable when things go wrong. He’s naturally competitive, and while he doesn’t always show it, he cares deeply about the people on his team.</p>
+    </div>
+
+    <div class="card">
+      <h2>Powers & Abilities</h2>
+      <ul>
+        <li><strong>Momentum Charge:</strong> Blaze builds up power the longer and faster he moves, storing it to unleash enhanced abilities.</li>
+        <li><strong>Disruption Pulse:</strong> Sends out a kinetic shockwave that scrambles tech and focus in a short radius.</li>
+        <li><strong>Adrenaline Surge:</strong> Boosts allies’ reaction speed and energy, making them hyper-focused and quick for a limited time.</li>
+        <li><strong>Momentum Overdrive (Ultimate):</strong> Unleashes all stored kinetic energy in explosive moves—shockwave slams, sonic-speed punches, or a volatile escape burst.</li>
+      </ul>
+      <p>His combat style is all about keeping pressure high and never staying still. He’s hard to hit, harder to corner, and always brings chaos with a smile.</p>
+    </div>
+
+    <div class="card">
+      <h2>Relationships</h2>
+      <ul>
+        <li><strong>Coil:</strong> Blaze respects Coil’s leadership but often challenges his slower, cautious methods. The two have strong synergy once they sync up.</li>
+        <li><strong>Dylan:</strong> The two clash frequently. Blaze sees Dylan as too intense and brooding, while Dylan sees Blaze as too reckless.</li>
+        <li><strong>Blue:</strong> Blaze is wary of Blue’s passive-aggressive nature and often calls it out. Despite this, he tries to keep things light when tensions rise.</li>
+        <li><strong>Jaxbit:</strong> The two have chaotic energy in common and bounce off each other—sometimes literally. They’re either a perfect duo or a recipe for disaster.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Trivia</h2>
+      <ul>
+        <li>Blaze wears an orange hoodie, has a plaster on his nose, and always seems to be slightly vibrating with built-up motion energy.</li>
+        <li>His name, "Blaze," isn't about fire—it's about burning through limits and hitting top speed.</li>
+        <li>He has a fear of being slowed down—emotionally or physically. Stillness makes him uneasy.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    async function loadHTML(id, url) {
+      const resp = await fetch(url);
+      if (resp.ok) {
+        document.getElementById(id).innerHTML = await resp.text();
+      } else {
+        console.error(`Failed to load ${url}:`, resp.status);
+      }
+    }
+    loadHTML('header-placeholder', '../header.html');
+    loadHTML('footer-placeholder', '../footer.html');
+  </script>
+
+</body>
+</html>

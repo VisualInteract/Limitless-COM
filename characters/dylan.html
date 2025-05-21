@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dylan | Limitless: Ultimate Archives</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Basic Info</h2>
+      <ul>
+        <li><strong>Name:</strong> Dylan</li>
+        <li><strong>Age:</strong> 18</li>
+        <li><strong>Role:</strong> Alternate Self, Protector</li>
+        <li><strong>First Appearance:</strong> Limitless: The Shattered Mirror</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p>Dylan is a variant of Coil from a divergent timeline—a version shaped by rage, grief, and relentless survival. Though he shares Coil’s core essence, Dylan is more impulsive, emotional, and confrontational. Despite his rough demeanor, he has a strong moral compass and is often the first to jump in to defend those in danger.</p>
+    </div>
+
+    <div class="card">
+      <h2>Personality</h2>
+      <p>Dylan is hotheaded and quick to anger, especially in the face of injustice or betrayal. While he may seem aggressive, he is deeply empathetic to those who are hurt or vulnerable. He struggles with guilt and internal conflict, but channels it into a fiery will to protect. Beneath his sharp edge lies a caring heart, loyal to his allies and unwavering in battle.</p>
+    </div>
+
+    <div class="card">
+      <h2>Powers & Abilities</h2>
+      <ul>
+        <li><strong>Reality Shards:</strong> Dylan wields fragmented pieces of multiversal code, using them to defend, attack, or warp logic.</li>
+        <li><strong>Overdrive State:</strong> When enraged or cornered, Dylan's power surges uncontrollably, granting immense strength at the cost of control.</li>
+        <li><strong>Empathic Sync:</strong> Dylan can connect emotionally with others, sensing hidden pain or fear—though this often overwhelms him.</li>
+      </ul>
+      <p>His powers are raw, volatile, and closely tied to his emotional state. He lacks the stability of Coil but compensates with sheer intensity.</p>
+    </div>
+
+    <div class="card">
+      <h2>Relationships</h2>
+      <ul>
+        <li><strong>Coil:</strong> Dylan's counterpart. They clash ideologically, but there is unspoken respect and shared pain between them.</li>
+        <li><strong>Blue:</strong> Dylan is protective of Blue, especially when Coil hesitates. He doesn’t tolerate Blue's passive aggression and calls it out.</li>
+        <li><strong>Red:</strong> Dylan finds peace in Red’s presence. Her grounding influence helps him cool down during emotional spirals.</li>
+        <li><strong>Jaxbit:</strong> Their chaotic natures sometimes align, but Dylan finds Jaxbit frustrating and unpredictable.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Trivia</h2>
+      <ul>
+        <li>Dylan wears spiked headphones and a brown flannel over a black vest as a symbol of both rebellion and resilience.</li>
+        <li>Though angrier and more damaged, Dylan’s sense of justice is stronger than most characters in the cast.</li>
+        <li>He originally existed as a mental construct—a "what if" version of Coil—until gaining physical form during a timeline collapse.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    async function loadHTML(id, url) {
+      const resp = await fetch(url);
+      if (resp.ok) {
+        document.getElementById(id).innerHTML = await resp.text();
+      } else {
+        console.error(`Failed to load ${url}:`, resp.status);
+      }
+    }
+    loadHTML('header-placeholder', '../header.html');
+    loadHTML('footer-placeholder', '../footer.html');
+  </script>
+
+</body>
+</html>
